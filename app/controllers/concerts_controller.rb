@@ -1,18 +1,18 @@
-# class ConcertsController < ApplicationController
+class ConcertsController < ApplicationController
 
-#     def index
-#         render json: Concert.all
-#     end
+    def index
+        render json: Concert.all
+    end
 
-#     def show
-#         concert = findConcert
-#         render json: concert, serializer: ConcertWithCommentsSerializer
-#     end
+    def show
+        concert = findConcert
+        render json: concert, serializer: ConcertWithCommentsSerializer
+    end
 
-# private
+private
 
-#     def findConcert
-#         Concert.find(params[:id])
-#     end
+    def findConcert
+        Concert.find(params[:id])
+    end
 
-# end
+end
